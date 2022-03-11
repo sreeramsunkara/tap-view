@@ -55,6 +55,10 @@ tap_gui:
       enablePlugin: true
     backend:
       baseUrl: #@ "https://{}".format(data.values.tap.domains.tapGui)
+      reading:
+        allow:
+          - host: "swagger.io"
+          - host: "*.tap.tanzu4u.net"
       cors:
         origin: #@ "https://{}".format(data.values.tap.domains.tapGui)
       #@ if "backstage" in data.values.tap.credentials and "database" in data.values.tap.credentials.backstage:
